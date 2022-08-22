@@ -12,6 +12,7 @@ let baralho = [];
 let jogadas = 0;
 let primeiraCarta;
 let segundaCarta;
+let jogou = 0;
 
 function paraJogar(){
      qtdeCartas = Number (prompt("Para jogar insira um número entre 4 e 14, lembrando só vale número par!"));
@@ -40,7 +41,7 @@ function paraJogar(){
     }
   
     function virarCarta(card){
-        
+        jogou++
         card.classList.add("virar")
         if(primeiraCarta === undefined){
             primeiraCarta = card
@@ -51,6 +52,7 @@ function paraJogar(){
             primeiraCarta = undefined;
             segundaCarta = undefined;
             jogadas++
+            contadorAcertos()
             
         } else{
             setTimeout(cartaVirada, 1000)
@@ -80,8 +82,19 @@ function paraJogar(){
         puxarCartas()
     }
 
-    // if se contador de acertos for = a metade da quantidade de cartas alert finaliza jogo
-// const card = document.querySelector('.container');
+    // pwdif se contador de acertos for = a metade da quantidade de cartas alert finaliza jogo
+    function contadorAcertos(){
+        if (jogadas === qtdeCartas /2 ){
+           setTimeout(ganhou, 2000)
+            function ganhou(){alert (`Você ganhou em ${jogou /2} jogadas`)}
+            
+            
+        }
+
+
+        
+    }
+    // const card = document.querySelector('.container');
 
      
 

@@ -1,17 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
 
-body {
+
+body{
     background-color: #f1edb2;
-    height: 100vh;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 60px;
-    white-space: nowrap;    
+       
     color: #75B79E;
     margin-top: 40px;
-     
+    flex-direction: column;
+     flex-wrap: wrap;
+    
+}
+
+.header {
+    
+    t
 }
 
 
@@ -20,8 +27,8 @@ body {
 
 .container {
    box-sizing: border-box;
-    width: 1000px;
-    height: 320px;
+    width: 100%;
+    height: 100%px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -31,8 +38,8 @@ body {
   }
 
   .memory-card{
-    width: 120px;
-    height: 146px;
+    width: 170px;
+    height: 200px;
     margin: 5px;
     border-radius: 5px;
     position: relative;
@@ -74,3 +81,12 @@ body {
         position: absolute;
       }
  
+
+      @media (max-width: 500px){
+        .container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        }
+
+        
